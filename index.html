@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CtrlSec — Bahia → São Paulo</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="logo-bracket">[</span>CTRL<span class="logo-accent">SEC</span><span class="logo-bracket">]</span>
+      </div>
+      <div class="nav-links">
+        <a href="#historia">História</a>
+        <a href="#equipe">Equipe</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#missao">Missão</a>
+        <a href="#vlog">Vlog</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="photo3.jpg" alt="Equipe CtrlSec" class="hero-image" id="heroImg" />
+      <div class="hero-overlay"></div>
+      <div class="hero-gradient"></div>
+    </div>
+
+    <!-- Particles canvas -->
+    <canvas id="particleCanvas" class="particle-canvas"></canvas>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal-up">
+        <span class="eyebrow-dot"></span>
+        Grand Prix Petrobras · 1º Lugar Nacional
+        <span class="eyebrow-dot"></span>
+      </div>
+      <h1 class="hero-title reveal-up delay-1">
+        CTRLSEC<br />
+        <span class="title-accent">EM SÃO PAULO</span>
+      </h1>
+      <p class="hero-sub reveal-up delay-2">Da vitória nacional ao próximo desafio.</p>
+      <p class="hero-body reveal-up delay-3">
+        Após conquistar o 1º lugar nacional no Grand Prix Petrobras, a equipe CtrlSec foi convidada para participar do Hackathon Ideias Raras em São Paulo. Agora começa uma nova jornada.
+      </p>
+
+      <!-- COUNTDOWN -->
+      <div class="countdown-wrap reveal-up delay-4" id="countdownWrap">
+        <div class="countdown-glass">
+          <div class="countdown-border"></div>
+          <div class="countdown-inner">
+            <div class="countdown-unit" id="cd-days">
+              <span class="cd-num" id="days">00</span>
+              <span class="cd-label">Dias</span>
+            </div>
+            <div class="cd-sep">:</div>
+            <div class="countdown-unit" id="cd-hours">
+              <span class="cd-num" id="hours">00</span>
+              <span class="cd-label">Horas</span>
+            </div>
+            <div class="cd-sep">:</div>
+            <div class="countdown-unit" id="cd-mins">
+              <span class="cd-num" id="minutes">00</span>
+              <span class="cd-label">Minutos</span>
+            </div>
+            <div class="cd-sep">:</div>
+            <div class="countdown-unit" id="cd-secs">
+              <span class="cd-num" id="seconds">00</span>
+              <span class="cd-label">Segundos</span>
+            </div>
+          </div>
+        </div>
+        <p class="countdown-label">Embarque para São Paulo</p>
+      </div>
+
+      <!-- ARRIVED MESSAGE (hidden initially) -->
+      <div class="arrived-msg" id="arrivedMsg">
+        <span class="arrived-emoji">✈️</span>
+        <span>Chegou o grande dia!</span>
+        <span class="arrived-emoji">✈️</span>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>SCROLL</span>
+    </div>
+  </section>
+
+  <!-- HISTÓRIA -->
+  <section class="section historia" id="historia">
+    <div class="section-grid">
+      <div class="section-tag reveal-left">// 001 — ORIGEM</div>
+      <h2 class="section-title reveal-up">A História<br /><span class="text-gradient">da CtrlSec</span></h2>
+      <div class="historia-body">
+        <p class="historia-quote reveal-up delay-1">
+          "Tudo começou como um sonho. Com dedicação, criatividade e trabalho em equipe, a CtrlSec conquistou o topo do Grand Prix Petrobras e agora leva a inovação baiana para um dos maiores ecossistemas de tecnologia do país."
+        </p>
+        <div class="historia-stats reveal-up delay-2">
+          <div class="stat-card">
+            <span class="stat-num">#1</span>
+            <span class="stat-desc">Nacional<br />Grand Prix Petrobras</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">3</span>
+            <span class="stat-desc">Jovens da<br />Bahia</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">SP</span>
+            <span class="stat-desc">Próximo<br />Destino</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPE -->
+  <section class="section equipe" id="equipe">
+    <canvas id="teamCanvas" class="team-canvas"></canvas>
+    <div class="section-grid">
+      <div class="section-tag reveal-left">// 002 — EQUIPE</div>
+      <h2 class="section-title reveal-up">Uma equipe.<br /><span class="text-gradient">Uma missão.</span></h2>
+      <div class="team-card reveal-up delay-1">
+        <div class="team-card-glow"></div>
+        <div class="team-names">
+          <div class="team-name-item">
+            <span class="name-index mono">01</span>
+            <span class="name-text">Lucca Romano</span>
+            <span class="name-role">Inovação</span>
+          </div>
+          <div class="team-divider"></div>
+          <div class="team-name-item">
+            <span class="name-index mono">02</span>
+            <span class="name-text">Áttila</span>
+            <span class="name-role">Criatividade</span>
+          </div>
+          <div class="team-divider"></div>
+          <div class="team-name-item">
+            <span class="name-index mono">03</span>
+            <span class="name-text">Brahyan</span>
+            <span class="name-role">Tecnologia</span>
+          </div>
+        </div>
+        <div class="team-tags">
+          <span class="tag">União</span>
+          <span class="tag">Amizade</span>
+          <span class="tag">Inovação</span>
+          <span class="tag">Criatividade</span>
+          <span class="tag">Empreendedorismo</span>
+          <span class="tag">Talento Jovem</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section class="section galeria" id="galeria">
+    <div class="section-grid">
+      <div class="section-tag reveal-left">// 003 — REGISTROS</div>
+      <h2 class="section-title reveal-up">A Jornada<br /><span class="text-gradient">em Imagens</span></h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item gi-large reveal-up delay-1" data-parallax="0.08">
+        <div class="gallery-frame">
+          <img src="photo4.jpg" alt="CtrlSec com medalhas" />
+          <div class="gallery-overlay">
+            <span class="gallery-label mono">Grand Prix Petrobras · 1º Lugar</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item gi-tall reveal-up delay-2" data-parallax="0.12">
+        <div class="gallery-frame">
+          <img src="photo3.jpg" alt="CtrlSec celebrando" />
+          <div class="gallery-overlay">
+            <span class="gallery-label mono">A Conquista</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item gi-wide reveal-up delay-3" data-parallax="0.06">
+        <div class="gallery-frame">
+          <img src="photo5.jpg" alt="CtrlSec no evento" />
+          <div class="gallery-overlay">
+            <span class="gallery-label mono">Participantes · BAIA</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item gi-small reveal-up delay-2" data-parallax="0.1">
+        <div class="gallery-frame">
+          <img src="photo1.jpg" alt="CtrlSec juntos" />
+          <div class="gallery-overlay">
+            <span class="gallery-label mono">Unidos</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item gi-medium reveal-up delay-3" data-parallax="0.09">
+        <div class="gallery-frame">
+          <img src="photo2.jpg" alt="CtrlSec nos bastidores" />
+          <div class="gallery-overlay">
+            <span class="gallery-label mono">Bastidores</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSÃO -->
+  <section class="section missao" id="missao">
+    <div class="section-grid">
+      <div class="section-tag reveal-left">// 004 — MISSÃO</div>
+      <h2 class="section-title reveal-up">Representando<br /><span class="text-gradient">a Bahia</span></h2>
+      <p class="missao-sub reveal-up delay-1">
+        Mais do que participar de um evento, estamos levando conosco a força da juventude baiana, mostrando que grandes ideias podem nascer em qualquer lugar.
+      </p>
+      <div class="missao-cards">
+        <div class="missao-card reveal-up delay-1">
+          <div class="missao-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Inovação</h3>
+          <p>Soluções criativas que transformam ideias em impacto real no cenário tecnológico nacional.</p>
+        </div>
+        <div class="missao-card reveal-up delay-2">
+          <div class="missao-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3>Excelência</h3>
+          <p>1º lugar nacional como prova de que dedicação e trabalho em equipe levam ao topo.</p>
+        </div>
+        <div class="missao-card reveal-up delay-3">
+          <div class="missao-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3>Representatividade</h3>
+          <p>Mostrando que o talento baiano tem lugar nos maiores hubs de inovação do Brasil.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="section timeline-sec" id="timeline">
+    <div class="section-grid">
+      <div class="section-tag reveal-left">// 005 — TIMELINE</div>
+      <h2 class="section-title reveal-up">A Jornada<br /><span class="text-gradient">Passo a Passo</span></h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal-left delay-1">
+        <div class="tl-marker">
+          <span class="tl-num mono">01</span>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-content">
+          <div class="tl-status done">Concluído</div>
+          <h3>Convite para o Evento</h3>
+          <p>Recebido após a conquista do 1º lugar nacional no Grand Prix Petrobras. O reconhecimento que abriu as portas.</p>
+        </div>
+      </div>
+      <div class="tl-item reveal-right delay-1">
+        <div class="tl-marker">
+          <span class="tl-num mono">02</span>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-content">
+          <div class="tl-status done">Concluído</div>
+          <h3>Planejamento da Viagem</h3>
+          <p>Cada detalhe pensado para garantir que a missão São Paulo aconteça com tudo o que ela merece.</p>
+        </div>
+      </div>
+      <div class="tl-item reveal-left delay-2">
+        <div class="tl-marker">
+          <span class="tl-num mono">03</span>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-content">
+          <div class="tl-status done">Concluído</div>
+          <h3>Vakinha Concluída</h3>
+          <p>A comunidade que acredita no sonho. O apoio que tornou tudo possível.</p>
+        </div>
+      </div>
+      <div class="tl-item reveal-right delay-2">
+        <div class="tl-marker">
+          <span class="tl-num mono">04</span>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-content">
+          <div class="tl-status active">Em andamento</div>
+          <h3>Preparação</h3>
+          <p>Refinando o projeto, estudando o ecossistema, se preparando para representar a Bahia com excelência.</p>
+        </div>
+      </div>
+      <div class="tl-item reveal-left delay-3">
+        <div class="tl-marker">
+          <span class="tl-num mono">05</span>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-content">
+          <div class="tl-status upcoming">Em breve</div>
+          <h3>Embarque</h3>
+          <p>05 de agosto de 2026. O dia em que três jovens da Bahia partem rumo ao maior desafio de suas vidas.</p>
+        </div>
+      </div>
+      <div class="tl-item reveal-right delay-3">
+        <div class="tl-marker">
+          <span class="tl-num mono">06</span>
+          <div class="tl-dot tl-dot-final"></div>
+        </div>
+        <div class="tl-content">
+          <div class="tl-status upcoming">Em breve</div>
+          <h3>São Paulo</h3>
+          <p>Hackathon Ideias Raras. A CtrlSec no coração da inovação brasileira. O capítulo mais emocionante começa aqui.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VLOG -->
+  <section class="section vlog-sec" id="vlog">
+    <div class="section-grid">
+      <div class="section-tag reveal-left">// 006 — VLOG</div>
+      <h2 class="section-title reveal-up">Viva essa experiência<br /><span class="text-gradient">com a gente</span></h2>
+      <p class="vlog-sub reveal-up delay-1">
+        Vamos registrar cada momento dessa aventura. Desde a preparação, o embarque e a chegada em São Paulo até os bastidores do Hackathon Ideias Raras. Tudo será transformado em um vlog especial para que todos possam acompanhar essa jornada.
+      </p>
+      <div class="vlog-player reveal-up delay-2">
+        <div class="vlog-screen">
+          <div class="vlog-rec">
+            <span class="rec-dot"></span>
+            <span class="rec-text mono">REC</span>
+          </div>
+          <div class="vlog-center-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          </div>
+          <div class="vlog-screen-text">
+            <span class="mono">CtrlSec_Vlog_2026.mp4</span>
+            <span class="mono vlog-duration">EM BREVE</span>
+          </div>
+          <div class="vlog-timeline-bar">
+            <div class="vlog-progress"></div>
+            <div class="vlog-chapters">
+              <span class="chapter-marker" style="left:0%"><span class="chapter-label">Preparação</span></span>
+              <span class="chapter-marker" style="left:33%"><span class="chapter-label">Embarque</span></span>
+              <span class="chapter-marker" style="left:60%"><span class="chapter-label">São Paulo</span></span>
+              <span class="chapter-marker" style="left:82%"><span class="chapter-label">Hackathon</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="vlog-meta">
+          <div class="vlog-channel">
+            <div class="channel-dot"></div>
+            <span>Canal CtrlSec — Bahia → SP 2026</span>
+          </div>
+          <span class="mono vlog-notify">Acompanhe a jornada</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRASE FINAL -->
+  <section class="section frase-sec">
+    <div class="frase-wrap">
+      <div class="frase-glow"></div>
+      <p class="frase-text reveal-up">
+        "Grandes conquistas começam como sonhos.<br />
+        <span class="frase-accent">As melhores histórias começam quando decidimos persegui-los."</span>
+      </p>
+      <div class="frase-line reveal-up delay-1"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-bracket">[</span>CTRL<span class="logo-accent">SEC</span><span class="logo-bracket">]</span>
+      </div>
+      <p class="footer-main">De apenas um sonho para Campeões Nacionais.</p>
+      <p class="footer-sub mono">Equipe CtrlSec &nbsp;·&nbsp; Bahia → São Paulo &nbsp;·&nbsp; Hackathon Ideias Raras 2026</p>
+      <div class="footer-line"></div>
+      <p class="footer-copy mono">© 2026 CtrlSec — Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
